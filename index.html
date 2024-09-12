@@ -9,6 +9,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
+        /* 구글 폰트 적용 */
+        @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+        .PlaypenSans
+        {
+            font-family: "Playpen Sans", sans-serif;
+        }
+
         /* 기본 스타일 시트 CSS */
         *
         {
@@ -34,8 +41,8 @@
         }
         header
         {
-            position: absolute; /*fixd 값으로 지정해야 하나, 프로젝트 완성본 처럼 부드럽게 보이려면 자바스크립트가 필요하므로 일단 absolute 값으로 지정*/
-            color: black; 
+            position: absolute; /*absolute -> fixd */
+            color: white; /*black -> white*/
             top: 0; 
             z-index: 1; /*스크롤 했을 때, 다른 요소 밑에 가려서 안 보이는 일이 없도록 헤더의 z-index 속성 값을 0보다 크게 설정*/
             width: 100%;
@@ -73,6 +80,7 @@
         header nav ul li button
         {
             font-size: 1.2rem;
+            color: white; /*텍스트 흰색*/
         }
         /* 메인 영역 */
         main  /* 배경 이미지 지정*/
@@ -98,6 +106,9 @@
             font-size: 3.5rem;
             margin: 2rem 0;
             letter-spacing: 3px;
+            /* 구글 폰트 추가 2 */
+            letter-spacing: 3px;
+            font-family: "Playpen Sans", sans-serif;
         }
         main p
         {
@@ -146,7 +157,7 @@
                 bottom: 1rem;
             }
         }
-        /* 메인 화면의 글자가 지워졌다가 다시 채워지는 기능 */
+        /* 텍스트 타이핑 효과 기능 */
         main h2 span::after
         {
             content: "";
@@ -168,10 +179,11 @@
             }
         }
 
+
     </style>
 </head>
 <body>
-    <!-- header` -->
+    <!-- header -->
     <header>
         <div class="container"> <!-- HTML 구조의 핵심인 container 클래스가 포함된 div 태그-->
             <h1>
@@ -206,5 +218,26 @@
             <button class="mouse"><i class="fa-solid fa-computer-mouse"></i></button>
         </div>
     </main>
+    <!-- section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="title">
+                <h4>Who Am I</h4>
+                <h2>About Me</h2>
+            </div>
+            <div class="about-self">
+                <div class="left">
+                    <img src="images/me_alone.jpg" alt="">
+                </div>
+            </div>
+            <div class="right">
+                <h3>Hello, <strong>I`m Yuncoding</strong></h3>
+                <p>I'm a Web Front-end and Back-end Developer</p>
+            </div>
+            <div class="social">
+                ///
+            </div>
+        </div>
+    </section>
 </body>
 </html>
